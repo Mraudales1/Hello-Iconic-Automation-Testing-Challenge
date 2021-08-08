@@ -13,3 +13,11 @@ const pages = {
 Given(/^I am on the (\w+) page$/, async (page) => {
     await pages[page].open()
 });
+
+
+Given(/^I am logged on (\w+) page with (\w+) and (.*)$/, async (page, username, password) => {
+    await LoginPage.open()
+    await LoginPage.login(username, password)
+    await browser.pause(3000)
+    await await pages[page].open()
+});

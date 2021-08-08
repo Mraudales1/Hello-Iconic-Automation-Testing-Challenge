@@ -39,3 +39,8 @@ Then(/^I should see all information about that book$/, async () => {
 Then(/^I should see all books ordered by (\w+) with first book being (.+)$/, async (type, book) => {
     await expect(await BookstorePage.firstBook.getText()).toContain(book);
 });
+
+Then(/^I should see an alert$/, async () => {
+    await browser.pause(4000)
+    await expect(await browser.isAlertOpen()).toBeTruthy()
+});

@@ -1,8 +1,5 @@
 Feature: Profile
-     Background:
-      Given I am logged in
-      And I am on profile page
-    
+   
     Scenario Outline: As a user, I can log into the secure area
 
       Given I am on the login page

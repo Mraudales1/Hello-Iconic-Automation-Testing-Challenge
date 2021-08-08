@@ -1,9 +1,9 @@
 const { When } = require('@cucumber/cucumber');
 
+const BookPage = require('../../pages/book/book.page');
 const BookstorePage = require('../../pages/bookstore/bookstore.page');
 const LoginPage = require('../../pages/login/login.page');
 const ProfilePage = require('../../pages/profile/profile.page');
-
 
 const pages = {
     login: LoginPage,
@@ -36,4 +36,11 @@ When(/^I click on a book$/, async () => {
 When(/^I order books by (.+)$/, async (type) => {
     await browser.pause(3000)
     await BookstorePage.orderBy(type)
+});
+
+When(/^I click to add book to collection$/, async () => {
+    await browser.pause(3000)
+    await BookPage.addBookButton.scrollIntoView();
+    await browser.pause(3000)
+    await BookPage.addBookButton.click()
 });
