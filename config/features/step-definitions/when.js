@@ -44,3 +44,21 @@ When(/^I click to add book to collection$/, async () => {
     await browser.pause(3000)
     await BookPage.addBookButton.click()
 });
+
+When(/^I click on Delete Account$/, async () => {
+    await ProfilePage.btnDeleteAccount.scrollIntoView();
+    await ProfilePage.btnDeleteAccount.click()
+    await browser.pause(3000)
+});
+
+When(/^I click on Delete All Books$/, async () => {
+    await ProfilePage.btnDeleteBooks.scrollIntoView();
+    await ProfilePage.btnDeleteBooks.click()
+    await browser.pause(3000)
+});
+
+When(/^I click on Delete Book$/, async () => {
+    await ProfilePage.firtBookDeleteButton.scrollIntoView();
+    await ProfilePage.firtBookDeleteButton.click()
+    await browser.pause(3000)
+});

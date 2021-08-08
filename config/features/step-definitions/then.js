@@ -44,3 +44,12 @@ Then(/^I should see an alert$/, async () => {
     await browser.pause(4000)
     await expect(await browser.isAlertOpen()).toBeTruthy()
 });
+
+Then(/^I should see a dialog for (.*)$/, async (title) => {
+    await browser.pause(2000)
+    await expect(await ProfilePage.deleteDialogTitle.getText()).toContain(title)
+});
+
+Then(/^I should see the book im looking for on my profile$/, async () => {
+    await expect(await ProfilePage.firstBook.getText()).toContain('Learning JavaScript Design Patterns');
+});
