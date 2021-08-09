@@ -1,6 +1,6 @@
 Feature: Login
 
-  Scenario Outline: As a user, I can't log with invalid credentials
+  Scenario Outline: As a user, I can't log into the secure area
 
     Given I am on the login page
     When I login with <username> and <password>
@@ -11,7 +11,7 @@ Feature: Login
       | Walton_Metz         | TbbxbneH6sqX         | Invalid username or password!  |
       | WaltonMetz          | TbbxbneH6sqX1ED@     | Invalid username or password!  |
   
-  Scenario Outline: As a user, I can log in
+  Scenario Outline: As a user, I can log into the secure area
 
     Given I am on the login page
     When I login with <username> and <password>
