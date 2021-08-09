@@ -1,6 +1,6 @@
 Feature: BookStore
 
-  Scenario Outline: As a user, I search a book by name
+  Scenario Outline: As a user, I search a book by different type
 
     Given I am on the bookstore page
     When I search a book by <type> with the text <search>
@@ -11,13 +11,13 @@ Feature: BookStore
       | Name                | Git Pocket Guide            |
       | Author              | Richard E. Silverman        |
   
-  Scenario Outline: As a user, I search a book by name
+  Scenario Outline: As a user, I see all information of a book
 
     Given I am on the bookstore page
     When I click on a book 
     Then I should see all information about that book
 
-  Scenario Outline: As a user, I search a book by name
+  Scenario Outline: As a user, I can order books by different types
 
     Given I am on the bookstore page
     When I order books by <type>
@@ -28,7 +28,7 @@ Feature: BookStore
       | Title               | Git Pocket Guide            |
       | Author              | Learning JavaScript Design  |
 
-  Scenario Outline: As a user, I search a book by name
+  Scenario Outline: As a user, I can add a book to my collection
 
     Given I am logged on bookstore page with <username> and <password>
     When I click on a book
