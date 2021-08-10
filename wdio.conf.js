@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './features/**/profile.feature'
+        './features/**/login.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -64,18 +64,17 @@ exports.config = {
         // excludeDriverLogs: ['bugreport', 'server'],
     },*/{
         maxInstances: 5,
-        browserName: 'firefox',
-    }
-    /*{
-        maxInstances: 5,
-        browserName: 'safari',
+        browserName: 'chrome',
         acceptInsecureCerts: true
     },
     {
         maxInstances: 5,
+        browserName: 'safari',
+    },
+    {
+        maxInstances: 5,
         browserName: 'firefox',
-        acceptInsecureCerts: true
-    }*/
+    }
     ],
     //
     // ===================
@@ -124,7 +123,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver','devtools','firefox-profile'],
+    services: ['devtools','firefox-profile','selenium-standalone'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
