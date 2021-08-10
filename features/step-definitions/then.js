@@ -21,17 +21,14 @@ Then(/^I should see a message saying (.*)$/, async (message) => {
 Then(/^I should see my profile$/, async () => {
     await browser.pause(3000)
     await expect(await browser.getUrl()).toContain('https://demoqa.com/profile');
-    await expect(RegisterPage.mainTitle.getText()).toContain('Profile');
 });
 
 Then(/^I should see login page$/, async () => {
     await expect(await browser.getUrl()).toContain('https://demoqa.com/login');
-    await expect(RegisterPage.mainTitle.getText()).toContain('Login');
 });
 
 Then(/^I should see register page$/, async () => {
     await expect(await browser.getUrl()).toContain('https://demoqa.com/register');
-    await expect(RegisterPage.mainTitle.getText()).toContain('Register');
 });
 
 Then(/^I should see the book im looking for$/, async () => {
