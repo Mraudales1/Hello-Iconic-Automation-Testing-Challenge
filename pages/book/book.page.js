@@ -8,6 +8,7 @@ class BookPage extends Page {
      * define selectors using getter methods
      */
     get addBookButton () { return $('#addNewRecordButton=Add To Your Collection') }
+    get bookTitle() { return $('#title-label') }
 
     /**
      * a method to encapsule automation code to interact with the page
